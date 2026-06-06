@@ -30,6 +30,8 @@ import {
   Telescope,
   Sparkles,
 } from "lucide-react";
+import { TypeAnimation } from 'react-type-animation';
+
 
 // ─── DATA ────────────────────────────────────────────────
 
@@ -367,25 +369,36 @@ export default function HomePage() {
           </div>
 
           {/* H1 */}
-          <h1
-            className="animate-fade-in-up delay-100 font-normal leading-none text-white mb-6"
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2.8rem, 9vw, 7rem)",
-              letterSpacing: "-0.04em",
-              lineHeight: "0.95",
-              maxWidth: "900px",
-            }}
-          >
-            Hi, I&apos;m Pranav Vernekar.{" "}
-            <br className="hidden sm:block" />
-            A{" "}
-            <span className="text-highlight-cloud">Cloud and DevOps</span>
-            ,
-            <br className="hidden sm:block" />
-            <span className="text-highlight-ai">Generative AI Enthusiast</span>
-          </h1>
-
+  <h1
+  className="animate-fade-in-up delay-100 font-normal leading-none text-white mb-6"
+  style={{
+    fontFamily: "var(--font-display)",
+    fontSize: "clamp(2.8rem, 9vw, 7rem)",
+    letterSpacing: "-0.04em",
+    lineHeight: "0.95",
+    maxWidth: "900px",
+  }}
+>
+  <TypeAnimation
+    sequence={[
+      "Hi, I'm Pranav Vernekar.",
+      1500,
+      "Hi, I'm Pranav Vernekar.\nCloud & DevOps Engineer",
+      2000,
+      "Hi, I'm Pranav Vernekar.\nAWS Cloud Specialist",
+      2000,
+      "Hi, I'm Pranav Vernekar.\nInfrastructure Automation Expert",
+      2000,
+      "Hi, I'm Pranav Vernekar.\nGenerative AI Enthusiast",
+      2000,
+    ]}
+    wrapper="span"
+    speed={60}
+    repeat={Infinity}
+    style={{ whiteSpace: "pre-line" }}
+    className="block"
+  />
+</h1>
           {/* Subtitle */}
           <p
             className="animate-fade-in-up delay-200 max-w-2xl text-base sm:text-lg leading-relaxed mb-10"
